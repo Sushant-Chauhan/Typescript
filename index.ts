@@ -124,6 +124,16 @@ console.log(gen<string>('1','2'));
 console.log(gen<number>(3,4));
 console.log(gen<Array<number>>([1,4,8],[24,8,98]));
 
+function addUser<T extends {id: string}>(user:T) {
+    return user.id;
+}
+
+// any type
+function noRestrictions(a:any,b:any): any{
+    return a+b;
+}
+
+
 // tsc index.ts 
 // node index.js
 
